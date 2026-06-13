@@ -53,7 +53,7 @@ float	Fixed::toFloat(void) const
 
 int		Fixed::toInt(void) const
 {
-	int res = _rawBits / (1 << _fract);
+	int res = _rawBits >> _fract;
 	return res;
 }
 
