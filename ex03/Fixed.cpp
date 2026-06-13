@@ -7,32 +7,30 @@ const int	Fixed::_fract = 8;
 Fixed::Fixed(void)
 	: _rawBits(0)
 {
-	std::cout << GREEN << "Default constructor called" << RESET << std::endl;
+	//std::cout << GREEN << "Default constructor called" << RESET << std::endl;
 }
 
 Fixed::Fixed(int nb)
 {
-	std::cout << GREEN << "Int constructor called" << RESET << std::endl;
+	//std::cout << GREEN << "Int constructor called" << RESET << std::endl;
 	this->_rawBits = nb * ( 1 << _fract);
 }
 
 Fixed::Fixed(float nb)
 {
-	std::cout << GREEN << "Float constructor called" << RESET << std::endl;
-
+	//std::cout << GREEN << "Float constructor called" << RESET << std::endl;
 	this->_rawBits = roundf(nb * ( 1 << _fract));
 }
 
 Fixed::Fixed(const Fixed& obj)
 {
-	std::cout << GREEN << "Copy constructor called" << RESET << std::endl;
-
+	//std::cout << GREEN << "Copy constructor called" << RESET << std::endl;
 	this->_rawBits = obj.getRawBits();
 }
 
 Fixed::~Fixed()
 {
-	std::cout << RED << "Desctructor called." << RESET << std::endl;
+	//std::cout << RED << "Desctructor called." << RESET << std::endl;
 }
 
 float	Fixed::toFloat(void) const
